@@ -1,0 +1,27 @@
+.main-bg{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: var(--white-color);
+}
+.background1{
+    background-image: url(../img/pexels-olia-danilevich-4974912.jpg);
+    /* https://www.pexels.com/pt-br/@olia-danilevich/ */
+    max-width: 100vw;
+}
+.background2{
+    background-image: url(../img/confetti-doodles.svg);
+     /* background by SVGBackgrounds.com */
+}
+.main-content{
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 8rem var(--gap);
+}
+.white-bg{
+    background-color: var(--white-color);
+    color: var(--primary-color);
+}
+.section {
+    min-height: 100vh;
+}
