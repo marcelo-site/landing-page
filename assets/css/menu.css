@@ -1,13 +1,13 @@
 .menu{
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        padding: var(--gap);
-        border-bottom: 0.2rem solid var(--light-gray-color);
-        z-index: 11;
-    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: var(--gap);
+    border-bottom: 0.2rem solid var(--light-gray-color);
+    z-index: 11;
+}
 .menu ul {
     display: flex;
     list-style: none;

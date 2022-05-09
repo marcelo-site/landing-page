@@ -31,8 +31,6 @@
     max-width: 80rem;
     display: flex;
     flex-flow: column nowrap;
-    /* flex-direction: column;
-    flex-wrap: nowrap; */
     justify-content: center;
     text-align: center;
     min-height: 100vh;
@@ -166,98 +164,111 @@ div.full-widht{
     border-radius: 50%;
     color: var(--primary-color);
 }
-
+.left {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+}
+.btn-wats {
+    font-size: 2.5em;
+    background-color: #21D93D;
+    color: #ffffff;
+}
+.btn-wats:hover {
+    background-color: #ffffff;
+    color: #21D93D;
+}
+#wats::after {
+    content: 'Ajuda? Clique!';
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 0.3em;
+    background-color: #f5f0f0;
+    border: 2px solid rgba(0, 0, 0, 0.507);
+}
+.h2-menor{
+    font-weight: 400;
+    font-size: 1.1em;
+    margin: 20px 0;
+}
 .slideText {
     font-size: 2.5em;
     overflow: hidden;
     animation-duration: 4s;
     animation-name: slidein;
     animation-iteration-count: infinite;
+}
+#slideText1{
+    letter-spacing: .15em;
+}
+.inline-block{
+display: inline-block;
+}
+.inline-block{
+display: inline-block;
+}
+.flex > div{
+    position: relative;
+}
+.flex > div::after{
+    content: '\2758';
+    position: absolute;
+    bottom: -0.1em;
+    font-size: 3.5em;
+}
+@keyframes slidein {  
+    0% {
+        width: 0%;
     }
-    .inline-block{
-    display: inline-block;
+    5%{
+        width: 0%;
+    } 
+    30%{
+        width: 100%;
+    } 
+    70%{
+        width: 100%;
     }
-    /* .invisible{
-    display: none;
-    } */
-    /* ja tem no outro */
-    /* .flex{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    } */
-    /*  */
-    .inline-block{
-    display: inline-block;
+    95%{
+        width: 0%;
     }
-    .flex > div{
-        position: relative;
+    100% {
+        width: 0%;
     }
-    .flex > div::after{
-        content: '\2758';
-        position: absolute;
-        bottom: -0.1em;
-        font-size: 3.5em;
-    }
-    @keyframes slidein {  
-        0% {
-            width: 0%;
-        }
-        5%{
-            width: 0%;
-        } 
-        30%{
-            width: 100%;
-        } 
-        70%{
-            width: 100%;
-        }
-        95%{
-            width: 0%;
-        }
-        100% {
-            width: 0%;
-        }
-    }
-    i {
-        background-color: white;
-        font-size: 1.9em;
-        margin: 0.04em;
-        padding: 0.3em;
-        border-radius: 50%;
-    }
-    .fa-instagram-square{ 
-        color: #f81515;
-    }
-    .fa-instagram-square:hover{ 
-        color: rgb(255, 255, 255);
-        background-color: #f81515;
-    }
-    .fa-facebook {
-        color: #3e3ef0;
-    }
-    .fa-facebook:hover {
-        color: rgb(255, 255, 255);
-        background-color:#3e3ef0;
-    }
-    .fa-linkedin {
-        color:#0A66C2;
-    }
-    .fa-linkedin:hover {
-        color:#ffffff;
-        background-color: #0A66C2;
-    }
-    .fa-github-square {
-        color: #24292F;
-    }
-    .fa-github-square:hover {
-        color: #ffffff;
-        background-color: #24292F;
-    }
-    .fa-whatsapp-square {
-        color: #21D93D;
-    }
-    .fa-whatsapp-square:hover {
-        color: #ffffff;
-        background-color: #21D93D;
-    }
+}
+i {
+    background-color: white;
+    font-size: 2em;
+    margin: 0.1em;
+    padding: 0.3em;
+    border-radius: 50%;
+}
+.fa-instagram-square{ 
+    color: #f81515;
+}
+.fa-instagram-square:hover{ 
+    color: rgb(255, 255, 255);
+    background-color: #f81515;
+}
+.fa-facebook {
+    color: #3e3ef0;
+}
+.fa-facebook:hover {
+    color: rgb(255, 255, 255);
+    background-color:#3e3ef0;
+}
+.fa-linkedin {
+    color:#0A66C2;
+}
+.fa-linkedin:hover {
+    color:#ffffff;
+    background-color: #0A66C2;
+}
+.fa-github-square {
+    color: #24292F;
+}
+.fa-github-square:hover {
+    color: #ffffff;
+    background-color: #24292F;
+}

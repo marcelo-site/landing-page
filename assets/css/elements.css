@@ -20,7 +20,6 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    /* min-width: 100vw; */
     font-family: var(--font-normal);
     font-size: 1.6rem;
     line-height: 1.5;
@@ -54,7 +53,6 @@ p{
     margin-bottom: 3rem;
 }
 .responsive-table{
-    /* overflow: hidden; */
     overflow-x: auto;
 }
 table{
@@ -76,5 +74,4 @@ table td, table th{
 }
 tfoot td, thead th{
     background-color: var(--light-gray-color);
-    /* text-align: right; */
 }
