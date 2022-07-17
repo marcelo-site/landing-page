@@ -1,12 +1,11 @@
 .menu{
     position: fixed;
     top: 0;
-    left: 0;
     right: 0;
     width: 100%;
     padding: var(--gap);
     border-bottom: 0.2rem solid var(--light-gray-color);
-    z-index: 11;
+    z-index: 199;
 }
 .menu ul {
     display: flex;

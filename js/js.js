@@ -16,7 +16,7 @@ const displayHeigth = window.innerHeight
 const topButton = document.querySelector('.back-to-top')
 let top1 = () => {
     let top =  window.pageYOffset || document.documentElement.scrollTop
-    if(top >= displayHeigth/2){
+    if(top >= displayHeigth/3){
         topButton.classList.add('flex')
     } else {
         topButton.classList.remove('flex')
@@ -43,3 +43,67 @@ const slideText1 = document.getElementById("slideText1")
          slidetext2Class.remove('invisible')
         }
     }, 4000);
+
+//Modal img
+const modal = document.getElementById('modal')
+const imgModal = document.querySelectorAll('.grid img')
+const divModal = document.querySelector('#modal img')
+const exitModal = document.querySelector('.exit')
+const setaD = document.getElementById('setaD')
+const setaE = document.getElementById('setaE') 
+let srcValue = ''
+let src = ''
+let src1 = ''
+let src2 = ''
+let src3 = ''
+let src4 = ''
+const src5 = imgModal.length
+function modal1() {
+    for ( let index = 0;index < imgModal.length; index++) {
+        imgModal[index].addEventListener ( 'click' , function() {
+            srcValue = imgModal[index].getAttribute('src')
+            divModal.setAttribute('src', srcValue)
+            modal.classList.toggle('modal-active')
+        })
+    }
+}
+setaD.addEventListener ( 'click', () =>{
+    srcValue = divModal.getAttribute('src')
+    src = srcValue.split('-')
+    src1 = src[1].split ('.')
+    src2 = parseInt(src1[0])
+    if (src2 < src5){
+        divModal.setAttribute('src', src[0] +'-'+ (src2 + 1) + '.' + src1[1])
+        if(src2 == (src5 - 1)) {
+            setaD.classList.add('modal-fim')   
+        } 
+        else {
+            setaE.classList.remove('modal-fim')
+        }
+    }
+    
+    // console.log(src2)
+})
+setaE.addEventListener ( 'click', () =>{
+    srcValue = divModal.getAttribute('src')
+    src = srcValue.split('-')
+    src4 = src[1].split ('.')
+    src3 = parseInt(src4[0])
+    if (src3 > 1){
+        divModal.setAttribute('src', src[0] +'-'+ (src3 - 1) + '.' + src4[1])
+        if( src3 == 2){
+            setaE.classList.add('modal-fim')   
+        }
+        else  {
+        setaD.classList.remove('modal-fim')
+        }
+    }
+  
+    // console.log(src3)
+})
+exitModal.addEventListener ( 'click' , function() {
+    modal.classList.toggle('modal-active')
+    setaD.classList.remove('modal-fim')
+    setaE.classList.remove('modal-fim')
+})
+addEventListener ( 'load', modal1)

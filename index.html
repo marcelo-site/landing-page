@@ -49,7 +49,7 @@
                 <div class="main-content intro-content-flex">
                     <div class="intro-text">
                         <div class="flex">
-                            <div class="block">
+                            <div class="block position-relative">
                                 <div id="slideText1" class="slideText inline-block">Marcelo</div>
                                 <div id="slideText2" class= "slideText invisible">Programador</div>
                             </div>
@@ -95,27 +95,21 @@
         <section id="gallery" class="white-bg section">
             <div class="main-content">
                 <h2>gallery</h2>
-                <p class="grid-description">Uma breve descrição</p>
-                <div class="grid img-media">
-                    <div class="gallery-img">
-                     <img src="./assets/img/pexels-dmitriy-ganin-8379307.jpg" alt="">
-                    </div>
-                    <div class="gallery-img">
-                       <img src="./assets/img/pexels-emre-can-acer-2458118.jpg" alt="">
-                    </div>
-                    <div class="gallery-img">
-                        <img src="./assets/img/pexels-jefferson-lucena-10251995.jpg" alt="">
-                    </div>
-                    <div class="gallery-img">
-                     <img src="./assets/img/pexels-keegan-checks-10294339.jpg" alt="">
-                    </div>
-                    <div class="gallery-img">
-                       <img src="./assets/img/pexels-matteus-silva-11029040.jpg" alt="">
-                    </div>
-                    <div class="gallery-img">
-                        <img src="./assets/img/pexels-max-ravier-5873904.jpg" alt="">
-                    </div>
+                <p class="block">Uma breve descrição</p>
+                <div class="grid img-media position-relative">
+                        <div class="gallery-img"><img src="./assets/img/pexels-1.jpg" alt=""></div>
+                        <div class="gallery-img"><img src="./assets/img/pexels-2.jpg" alt=""></div>
+                        <div class="gallery-img"><img src="./assets/img/pexels-3.jpg" alt=""></div>
+                        <div class="gallery-img"><img src="./assets/img/pexels-4.jpg" alt=""></div>
+                        <div class="gallery-img"><img src="./assets/img/pexels-5.jpg" alt=""></div>
+                        <div class="gallery-img"><img src="./assets/img/pexels-6.jpg" alt="">  </div>           
                 </div>
+                <div id="modal" class="modal flex modal-inactive">
+                    <span class="exit">x</span>
+                    <span id="setaE" class="seta"> < </span>
+                    <span id="setaD" class="seta"> > </span>
+                    <img src="" alt="">
+            </div>
             </div>
         </section>
         <section id="grid-two" class="main-bg grid-one section background2">
@@ -225,8 +219,8 @@
                    </fieldset>
                 </div>
             </div>
-         
         </section>
+        
     </main>
 <footer>
     <p><a href="">Feito por Marcelo</a></p>

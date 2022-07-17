@@ -23,7 +23,7 @@
     }
     .close-menu {
         position: fixed;
-        z-index: 22;
+        /* z-index: 22; */
         top: 0;
         left: 0;
     }
@@ -33,16 +33,18 @@
         top: 1rem;
         right: 1rem;
     }
+    .close-menu-label::before{
+        content: 'Menu';
+        font-weight: 600;
+        display: inline;
+        position: absolute;
+        right: 28px;
+    }
     .invisible-media {
         display: none;
     }
     .visible-media {
         display: block;
-    }
-    .fundo{
-        padding: 5px;
-        padding-bottom: 0px;
-        background-color: rgba(0, 0, 0, 0.863);
     }
     .icon {
         fill: aliceblue;
