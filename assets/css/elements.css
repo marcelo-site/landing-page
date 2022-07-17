@@ -19,6 +19,9 @@ html{
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
+.body-overflow{
+    overflow: hidden;
+}
 body{
     font-family: var(--font-normal);
     font-size: 1.6rem;

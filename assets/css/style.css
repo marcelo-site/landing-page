@@ -159,21 +159,9 @@ div.full-widht{
     align-items: center;
     justify-content: center;
 }
-.back-to-top{
-    z-index: 100;
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    background-color: var(--white-color);
-    width: 5rem;
-    height: 5rem;
-    justify-content: center;
-    align-content: center;
-    border: 2px solid rgba(0, 0, 0, 0.507);
-    background-color: rgba(216, 210, 210, 0.87);
-    border-radius: 50%;
-    color: var(--primary-color);
-}
+
+
+
 .left {
     position: fixed;
     left: 20px;
@@ -221,9 +209,7 @@ display: inline-block;
 /* .position-absolute {
     position: absolute;
 }
-.flex > div{
-    position: relative;
-}*/
+*/
 .flex > div::after{
     content: '\2758';
     position: absolute;
@@ -295,10 +281,26 @@ display: inline-block;
     visibility: visible;
 }
 .fundo {
+    padding: 4px 4px 0px 5px;
     background-color: rgba(49, 48, 48);
     height: 100%;
     width: 100%;
     z-index: 10;
+}
+.back-to-top{
+    z-index: 100;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--white-color);
+    width: 5rem;
+    height: 5rem;
+    justify-content: center;
+    align-content: center;
+    border: 2px solid rgba(0, 0, 0, 0.507);
+    background-color: rgba(216, 210, 210, 0.87);
+    border-radius: 50%;
+    color: var(--primary-color);
 }
 .modal-fim {
     background-color: rgb(216 210 210 / 90%);
