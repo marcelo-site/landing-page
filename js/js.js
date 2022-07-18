@@ -50,7 +50,10 @@ const imgModal = document.querySelectorAll('.grid img')
 const divModal = document.querySelector('#modal img')
 const exitModal = document.querySelector('.exit')
 const setaD = document.getElementById('setaD')
-const setaE = document.getElementById('setaE') 
+const setaE = document.getElementById('setaE')
+const modalImg = document.querySelector('#modal img')
+const modalVer= document.querySelectorAll('.gallery-img')
+const modalPver = document.querySelector('.modal-ver')
 let srcValue = ''
 let src = ''
 let src1 = ''
@@ -99,7 +102,7 @@ setaE.addEventListener ( 'click', (e) =>{
     e.stopPropagation();
 })
 exitModal.addEventListener ( 'click' , function() {
-    modal.classList.toggle('modal-active')
+    // modal.classList.toggle('modal-active')
     setaD.classList.remove('modal-fim')
     setaE.classList.remove('modal-fim')
     body.classList.remove('body-overflow')
@@ -107,6 +110,9 @@ exitModal.addEventListener ( 'click' , function() {
 modal.addEventListener('click', (e) => {
     modal.classList.remove('modal-active')
     body.classList.remove('body-overflow')
-    // e.stopPropagation();
+    e.stopPropagation();
 } )
+modalImg.addEventListener('click', (e) => {
+    e.stopPropagation()
+})
 addEventListener ( 'load', modal1)
