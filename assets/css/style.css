@@ -6,6 +6,7 @@
     min-height: 100vh;
 }
 .intro-content-flex {
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -215,6 +216,7 @@ display: inline-block;
         opacity: 0;
     }
 }
+
 /* @keyframes slidein {  
     0% {
         width: 0%; 
@@ -297,6 +299,14 @@ display: inline-block;
     height: 100%;
     width: 100%;
     z-index: 10;
+}
+.fundo-menu-toggle{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    z-index: 190;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 .back-to-top{
     z-index: 100;

@@ -1,4 +1,10 @@
 @media (max-width: 800px){
+    .body-overflow{
+        overflow: hidden;
+    }
+    /* .background1{
+        background-position-x: 30%;
+    } */
     .intro-content, .grid{
         grid-template-columns: 1fr;
     }
@@ -21,10 +27,12 @@
         flex-direction: column;
         justify-content: center;
     }
-    .close-menu {
-        position: fixed;
-        top: 0;
-        left: 0;
+    #close-menu {
+        position: absolute;
+        top: 60px;
+        background-color: white;
+        width: 80%;
+        right: 0;
     }
     .close-menu-label{
         position: fixed;
@@ -54,7 +62,21 @@
         font-size: 7rem;
     }
 }
+.fundo-menu-toggle{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    z-index: 190;
+    background-color: rgba(0, 0, 0, 0.7);
+}
 @media (max-width: 480px) {
+    .background1{
+        background-position-x: center;
+    }
+    .slideText{
+        font-size: 3.5rem;
+    }
     #setaE{
         left: 0;
     }

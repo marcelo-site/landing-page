@@ -1,12 +1,21 @@
 const menuClose = document.querySelector('#icon-close');
 const menuOpen = document.querySelector('#icon-open');
 const closeOpen = document.getElementById('close-menu')
-function menu1(){
+const body = document.querySelector('body')
+const closeMenuLabel = document.querySelector('.close-menu-label')
+const closeMenu = document.querySelector('.menu-mobile')
+const fundoMenuToggle= document.querySelector('.fundo-menu-toggle')
+function menuResponsivo(){
     closeOpen.classList.toggle('visible-media');
     menuOpen.classList.toggle('visible-media');
-    menuClose.classList.toggle('visible-media')
+    menuClose.classList.toggle('visible-media');
+    body.classList.toggle('body-overflow')
+    fundoMenuToggle.classList.toggle('invisible')
 }
+closeMenuLabel.addEventListener('click', menuResponsivo)
+closeMenu.addEventListener('click', menuResponsivo)
 const displayHeigth = window.innerHeight
+//button top
 const topButton = document.querySelector('.back-to-top')
 let top1 = () => {
     let top =  window.pageYOffset || document.documentElement.scrollTop
@@ -26,10 +35,9 @@ function slideText(e) {
             textArray.forEach((letra, i) => {
                 setTimeout(function(){
                     e.innerHTML += letra
-                },100 * i)
+                },120 * i)
             });
-        }, 3000)
-       
+        }, 5000) 
  }
 const slideText1 = document.getElementById("slideText1");
 const slideText2 = document.getElementById("slideText2")
@@ -51,8 +59,7 @@ let src = ''
 let src1 = ''
 let src2 = ''
 const imgModalSize = imgModal.length
-const body = document.querySelector('body')
-function modal1() {
+function modalActive() {
     for ( let index = 0;index < imgModal.length; index++) {
         imgModal[index].addEventListener ( 'click' , function() {
             srcValue = imgModal[index].getAttribute('src')
@@ -62,37 +69,35 @@ function modal1() {
         })
     }
 }
-function ab(){
+function splitImg(){
     src = srcValue.split('-')
     src1 = src[1].split ('.')
     src2 = parseInt(src1[0])
 }
 setaE.addEventListener ( 'click', function(e){
     srcValue = divModal.getAttribute('src')
-    ab()
+    splitImg()
     if (src2 > 1){
-                divModal.setAttribute('src', src[0] +'-'+ (src2 - 1) + '.' + src1[1])
+                divModal.setAttribute('src', `${src[0]}-${src2 - 1}.${src1[1]}`)
                 if( src2 == 2){
                     setaE.classList.add('modal-fim')   
                 } else  {
                     setaD.classList.remove('modal-fim')
                 }
             }
-    console.log(srcValue)
     e.stopPropagation();
 } )
 setaD.addEventListener('click', function(e){
     srcValue = divModal.getAttribute('src')
-    ab()
+    splitImg()
     if (src2 < imgModalSize){
-                divModal.setAttribute('src', src[0] +'-'+ (src2 + 1) + '.' + src1[1])
+                divModal.setAttribute('src', `${src[0]}-${src2 + 1}.${src1[1]}`) 
                 if(src2 ==  (imgModalSize - 1)) {
                     setaD.classList.add('modal-fim')   
                 } else {
                     setaE.classList.remove('modal-fim')
                 }
             }
-    console.log(srcValue)
     e.stopPropagation();
 })
 exitModal.addEventListener ( 'click' , function() {
@@ -108,4 +113,4 @@ modal.addEventListener('click', (e) => {
 modalImg.addEventListener('click', (e) => {
     e.stopPropagation()
 })
-addEventListener ( 'load', modal1)
+addEventListener ( 'load', modalActive)
