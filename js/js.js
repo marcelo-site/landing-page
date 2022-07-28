@@ -46,24 +46,24 @@ slideText(slideText2)
 //Modal img
 const modal = document.getElementById('modal')
 const imgModal = document.querySelectorAll('.grid img')
-const divModal = document.querySelector('#modal img')
-const divModal1 = document.querySelector('#modal')
 const exitModal = document.querySelector('.exit')
 const setaD = document.getElementById('setaD')
 const setaE = document.getElementById('setaE')
 const modalImg = document.querySelector('#modal img')
 const modalVer= document.querySelectorAll('.gallery-img')
 const modalPver = document.querySelector('.modal-ver')
+const zoom = document.querySelector('.zoom')
 let srcValue = ''
 let src = ''
 let src1 = ''
 let src2 = ''
+const height = window.screen.width
 const imgModalSize = imgModal.length
 function modalActive() {
     for ( let index = 0;index < imgModal.length; index++) {
         imgModal[index].addEventListener ( 'click' , function() {
             srcValue = imgModal[index].getAttribute('src')
-            divModal.setAttribute('src', srcValue)
+        modalImg.setAttribute('src', srcValue)
             modal.classList.toggle('modal-active')
             body.classList.add('body-overflow')
         })
@@ -75,10 +75,10 @@ function splitImg(){
     src2 = parseInt(src1[0])
 }
 setaE.addEventListener ( 'click', function(e){
-    srcValue = divModal.getAttribute('src')
+    srcValue = modalImg.getAttribute('src')
     splitImg()
     if (src2 > 1){
-                divModal.setAttribute('src', `${src[0]}-${src2 - 1}.${src1[1]}`)
+                modalImg.setAttribute('src', `${src[0]}-${src2 - 1}.${src1[1]}`)
                 if( src2 == 2){
                     setaE.classList.add('modal-fim')   
                 } else  {
@@ -88,10 +88,10 @@ setaE.addEventListener ( 'click', function(e){
     e.stopPropagation();
 } )
 setaD.addEventListener('click', function(e){
-    srcValue = divModal.getAttribute('src')
+    srcValue = modalImg.getAttribute('src')
     splitImg()
     if (src2 < imgModalSize){
-                divModal.setAttribute('src', `${src[0]}-${src2 + 1}.${src1[1]}`) 
+                modalImg.setAttribute('src', `${src[0]}-${src2 + 1}.${src1[1]}`) 
                 if(src2 ==  (imgModalSize - 1)) {
                     setaD.classList.add('modal-fim')   
                 } else {
@@ -108,9 +108,25 @@ exitModal.addEventListener ( 'click' , function() {
 modal.addEventListener('click', (e) => {
     modal.classList.remove('modal-active')
     body.classList.remove('body-overflow')
+    console.log(11)
     e.stopPropagation();
 } )
 modalImg.addEventListener('click', (e) => {
     e.stopPropagation()
 })
-addEventListener ( 'load', modalActive)
+zoom.addEventListener('click', (e)=>{
+    // modalImg.style.width = '200%'
+modalImg.addEventListener('mousemove', (e) => {
+    const x = e.clientX - e.target.offsetLeft;
+    const y = e.clientY - e.target.offsetTop;
+    modalImg.style.transformOrigin = `${x}px ${y}px`;
+    modalImg.style.transform = 'scale(2)';
+})
+modalImg.addEventListener('mouseleave', () => {
+    modalImg.style.transformOrigin = 'center center'
+    modalImg.style.transform = 'scale(1)'
+})
+    e.stopPropagation()
+})
+
+window.addEventListener ( 'load', modalActive)
