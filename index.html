@@ -16,7 +16,7 @@
     <script src="https://kit.fontawesome.com/bfb615b5b4.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="fundo-menu-toggle invisible"></div>
+    <div id="fundo-menu-toggle" class="fundo-menu-toggle invisible"></div>
     <div>
         <div class="close-menu-label">
         <div id="icon-open" class="invisible visible-media icon fundo" >
@@ -31,12 +31,12 @@
                 <h1><a href="#">LOGO</a></h1>
                 <nav id="close-menu" class="menu-mobile invisible-media">
                     <ul class="flex">
-                        <li><a href="#top3">top3</a></li>
-                        <li><a href="#grid-one">Grid</a></li>
+                        <li><a href="#top3">portifolio</a></li>
+                        <!-- <li><a href="#grid-one"></a></li> -->
                         <li><a href="#gallery">Certificados</a></li>
-                        <li><a href="#grid-two">Work</a></li>
+                        <li><a href="#grid-two">3 Motivos</a></li>
                         <li><a href="#Pricing">Pricing</a></li>
-                        <li><a href="#Pricing">Pricing</a></li>
+                        <li><a href="#contato">Contato</a></li>
                     </ul>
                 </nav>
             </div>
@@ -52,7 +52,6 @@
                             <div class="block position-relative">
                                 <div id="slideText1" class="slideText invisible inline-block">Marcelo</div>
                                 <div id="slideText2" class= "slideText invisible">Programador</div>
-                                <!-- <div style="display: inline;">|</div> -->
                             </div>
                         </div>
                     </div>
@@ -66,37 +65,40 @@
                 </div>
         </section>
         <section class="section white-bg" >
-            <div id="top3" class="main-content top3-content">
-                <h2>TOP 3 JOBS</h2>
-                <p>The release of Apple Silicon-based Macs at the end of last year generated a flurry of news coverage and some surprises at the machine’s performance. This post details some background information on the experience of porting Firefox to run natively on these CPUs.</p>
-                <p>We’ll start with some background on the Mac transition and give an overview of Firefox internals that needed to know about the new architecture, before moving on to the concept of Universal Binaries.</p>
-                <p>We’ll then explain how DRM/EME works on the new platform, talk about our experience with macOS Big Sur, and discuss various updater problems we had to deal with. We’ll conclude with the release and an overview of various other improvements that are in the pipeline.</p>
-            </div>
-        </section>
-        <section id="grid-one" class="main-bg section background2">
-            <div class="main-content grid-one-content">
-                <h2>My grid</h2>
-                <p>Uma breve descrição</p>
+           
+            <div id="top3" class="main-content top3-conten">
+                <h2 class="port">portifolio</h2>
                 <div class="grid">
-                    <div>
-                        <h3>Teste 1</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ullam! Eligendi nobis maiores, nemo ratione fugiat nostrum odio laboriosam eveniet consequatur numquam nisi corrupti quod enim iure officia id modi?</p>
+                    <div class="">
+                        <a href="https://vainodigital.com/">
+                            <img class="" src="assets/Nova-pasta/Captura de tela 2022-07-31 101827.png" alt="">
+                            <p>Demostração de uma loja virtual</p>
+                        </a>
                     </div>
-                    <div>
-                        <h3>Teste 2</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ullam! Eligendi nobis maiores, nemo ratione fugiat nostrum odio laboriosam eveniet consequatur numquam nisi corrupti quod enim iure officia id modi?</p>
+                    <div class="">
+                        <a href="https://vainodigital.com/">
+                            <img class="" src="assets/Nova-pasta/Captura de tela 2022-07-31 101734.png" alt="">
+                            <p>Demostração de um site intitucional</p>
+                        </a>
                     </div>
-                    <div>
-                        <h3>Teste 3</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ullam! Eligendi nobis maiores, nemo ratione fugiat nostrum odio laboriosam eveniet consequatur numquam nisi corrupti quod enim iure officia id modi?</p>
+                    <div class="">
+                        <a href="https://vainodigital.com/">
+                            <img class="" src="assets/Nova-pasta/Captura de tela 2022-07-31 102052.png" alt="">
+                            <p>Meu portifolio no github</p>
+                        </a>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section id="grid-one" class="main-bg section background3">
+            <h2 class="port">Seu produto ou serviço online</h2>
+            <div>
+                <img src="assets/Nova-pasta/953322_OE60WU1-ai (2) (1).jpg" alt="">
             </div>
         </section>
         <section id="gallery" class="white-bg section">
             <div class="main-content">
                 <h2>Certificados</h2>
-                <!-- <p class="">Meus certicados</p> -->
                 <div class="grid img-media position-relative">
                     <div class="gallery-img"><img src="assets/img/certificado-1.jpg" alt=""></div>
                     <div class="gallery-img"><img src="assets/img/certificado-2.jpg" alt=""></div>
@@ -126,22 +128,24 @@
                     </div>
             </div>
         </section>
-        <section id="grid-two" class="main-bg grid-one section background2">
+        <section id="grid-two" class="main-bg grid-one section background3">
             <div class="main-content grid-one-content">
-                <h2>My grid</h2>
-                <p>Uma breve descrição</p>
+                <h2>Por que um site?</h2>
+                <p>Pelo menos 3 motivos</p>
                 <div class="grid">
                     <div>
-                        <h3>Teste 1</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ullam! Eligendi nobis maiores, nemo ratione fugiat nostrum odio laboriosam eveniet consequatur numquam nisi corrupti quod enim iure officia id modi?</p>
+                        <h3>Motivo</h3>
+                        <p>A internet está trasformando nossas relações,cada vez mais presente no nosso cotidiano, diminuindo distâncias, quantas vazes já não se sentimos mais perto de alguém com aquele "oi", "Bom dia!" online ou algo parecido, cenário que demonstra uma tendência que já é indispensável uma presença online para se comunicar com seu público-alvo, ai vem uma vantagem o quanto caro e cansativo seria estar disponível em todo canto a todo tempo, a internet proporcina isso de uma maneira mais realista.</p>
                     </div>
                     <div>
-                        <h3>Teste 2</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ullam! Eligendi nobis maiores, nemo ratione fugiat nostrum odio laboriosam eveniet consequatur numquam nisi corrupti quod enim iure officia id modi?</p>
+                        <h3>Motivo</h3>
+                        <p>Segundo dados do Centro Regional de Estudos para o Desenvolvimento da Sociedade da Informação (<a class="a-red
+                            " href="https://cetic.br/pt/pesquisa/domicilios/">Cetic.br</a>), houve um aumento de 11% no acesso a internet, em um pais com mais de 200 milhões de habitantes como o brasil, considerando margens de erro, uns 20, 30 milhões de novos internautas, um aumento consideravél desse público atingindo pouco mais de 80% do país. Há um intresse público e economico para integrar plenamente o país a internet, já dar para sentir um cheiro de oprtunidade para seu negócio.</p>
                     </div>
                     <div>
-                        <h3>Teste 3</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ullam! Eligendi nobis maiores, nemo ratione fugiat nostrum odio laboriosam eveniet consequatur numquam nisi corrupti quod enim iure officia id modi?</p>
+                        <h3>Motivo</h3>
+                        <p>Um dado concreto da importância da internet para seu negócio, é fornecido pela Cetic.br, as pessoas que fazem compras online, era <a class="a-red" href="https://cetic.br/pt/tics/domicilios/2019/individuos/H2/">39% da amostra em 2019</a> e em <a class="a-red" href="https://cetic.br/pt/tics/domicilios/2021/individuos/H2/">2021 já era 46%</a>, praticamente 50% do seu publico-alvo estar online e com tendência de crescimento.<br>
+                        Vai bobear e deixar seu público expostos a investidas do seu concorrente?.</p>
                     </div>
                 </div>
             </div>
@@ -198,46 +202,28 @@
                 </div>
             </div>
         </section>
-        <section id="contact-form" class="main-bg section background2">
-            <div class="main-content intro-content">
-                <div class="intro-text">
-                    <h2>January brings us Firefox 85
-                    </h2><p>To wrap up January, we are proud to bring you the release of Firefox 85. In this version we are bringing you support for the :focus-visible pseudo-class in CSS and associated devtools, and the complete removal of Flash support from Firefox. </p>
-                </div>
-                <div class="intro-img">
-                </div>
-                <div class="contact-form">
-                   <fieldset class="form-grid">
-                       <legend>Contact</legend>
-                       <div class="form-group">
-                           <label for="firstname">Firstname</label>
-                           <input type="text" name="firstname" id="firstname">
-                       </div>
-                       <div class="form-group">
-                           <label for="lastname">Lastname</label>
-                           <input type="text" name="lastname" id="lastname">
-                        </div>
-                        <div class="form-group full-widht">
-                           <label for="email">E-mail</label>
-                           <input type="email" name="email" id="email">
-                        </div>
-                        <div class="form-group full-widht">
-                           <label for="message">Message</label>
-                           <textarea name="message"  id="message" cols="30" rows="10"></textarea>
-                       </div>
-                       <div class="form-group">
-                           <button type="submit">Send</button>
-                       </div>
-                   </fieldset>
+        <section id="contato" class="main-bg section background2">
+         <h2>Contato</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d698.5378999909989!2d-36.2046943128128!3d-7.944355871247559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a97389c4db1fa1%3A0xce2f4449c9f3b184!2sR.%20Juscelino%20Nunes%20de%20Oliveira%2C%20230%20-%20Dona%20Dom%2C%20Santa%20Cruz%20do%20Capibaribe%20-%20PE%2C%2055190-000!5e0!3m2!1spt-BR!2sbr!4v1659292031448!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="grid">
+                <div class="link-tel"> 
+                    <a class="" href="tel:+5581991869812"><i class="fas fa-phone"></i><p class="p-bottom">Ligar (81) 99186-9812</p>
+                </a>
+            </div>
+                <div class="link-tel">
+                    <a id="" class="" href="https://api.whatsapp.com/send?phone=5581991869812&text=Olá%20,tenho%20interesse%20em%20seus%20serviços."><i class="fab fa-whatsapp btn-wats wats-menor"></i>
+                    <p>whatsapp</p>
+                </a> 
+                   
                 </div>
             </div>
     </section>
     </main>
-<footer>
-    <p><a href="">Feito por Marcelo</a></p>
-</footer>
-<a href="#" class="back-to-top invisible"><svg xmlns="http://www.w3.org/2000/svg" height="40" width="40"><path d="M11.958 25.625 10 23.667 20 13.667 30 23.625 28.042 25.583 20 17.583Z"/></svg></a>
+    <a href="#" class="back-to-top invisible"><svg xmlns="http://www.w3.org/2000/svg" height="40" width="40"><path d="M11.958 25.625 10 23.667 20 13.667 30 23.625 28.042 25.583 20 17.583Z"/></svg></a>
 <a id="wats" class="left" href="https://api.whatsapp.com/send?phone=5581991869812&text=Olá%20,tenho%20interesse%20em%20seus%20serviços."><i class="fab fa-whatsapp btn-wats"></i></a>
+<footer>
+ <p> Copyright © 2020 | <a href="https://www.facebook.com/profile.php?id=100015225941991">Marcelo</a>.</p>
+</footer>
 <script src="/js/js.js"></script>
 </body>
 </html>

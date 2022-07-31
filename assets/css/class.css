@@ -5,16 +5,19 @@
     color: var(--white-color);
 }
 .background1{
-    background-image: url(../img/pexels-pixabay-38519\ \(1\).jpg);
-    /* https://www.pexels.com/pt-br/@olia-danilevich/ */
+    background-image: url(../Nova-pasta/laptop-g537ab2cb8_1280.jpg);
     background-position-x: left;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    max-width: 100vw;
+    background-position: center;
+    background-size: cover;
 }
 .background2{
     background-image: url(../img/confetti-doodles.svg);
      /* background by SVGBackgrounds.com */
+}
+.background3 {
+    background-color: var(--primary-color);
 }
 .main-content{
     max-width: 120rem;
@@ -27,4 +30,5 @@
 }
 .section {
     min-height: calc(100vh - 60px);
+    overflow: hidden;
 }

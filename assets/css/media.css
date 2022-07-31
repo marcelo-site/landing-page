@@ -61,8 +61,7 @@
     .intro-text h2{
         font-size: 7rem;
     }
-}
-.fundo-menu-toggle{
+    .fundo-menu-toggle{
     position: fixed;
     height: 100%;
     width: 100%;
@@ -70,7 +69,14 @@
     z-index: 190;
     background-color: rgba(0, 0, 0, 0.7);
 }
+}
 @media (max-width: 480px) {
+    #contato .grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .link-tel {
+        width: 95%;
+    }
     .background1{
         background-position-x: center;
     }

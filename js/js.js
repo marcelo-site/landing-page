@@ -4,7 +4,7 @@ const closeOpen = document.getElementById('close-menu')
 const body = document.querySelector('body')
 const closeMenuLabel = document.querySelector('.close-menu-label')
 const closeMenu = document.querySelector('.menu-mobile')
-const fundoMenuToggle= document.querySelector('.fundo-menu-toggle')
+const fundoMenuToggle= document.querySelector('#fundo-menu-toggle')
 function menuResponsivo(){
     closeOpen.classList.toggle('visible-media');
     menuOpen.classList.toggle('visible-media');
@@ -128,5 +128,4 @@ modalImg.addEventListener('mouseleave', () => {
 })
     e.stopPropagation()
 })
-
 window.addEventListener ( 'load', modalActive)
