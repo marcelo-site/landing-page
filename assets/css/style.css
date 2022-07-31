@@ -186,7 +186,6 @@ div.full-widht{
     text-align: center;
     margin-top: 6rem;
 }
-
 #top3 div{
     margin: 20px;
     font-size: 20px;
@@ -201,7 +200,11 @@ div.full-widht{
 #top3 div p:after {
     content: ' ↗️';
 }
+section#grid-one {
+    min-height: 80vh;
+}
 #grid-one div img{
+    margin-top: 6rem;
     width: 100%;
 }
 .a-red{
@@ -352,7 +355,7 @@ iframe{
     fill: white;
 }
 .link-tel {
-    width: 40vw;
+    width: 95%;
     background-color: white;
     text-align: center;
 }
