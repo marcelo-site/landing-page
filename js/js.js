@@ -46,7 +46,7 @@ slideText(slideText2)
 //Modal img
 const largura = window.screen.width
 const modal = document.getElementById('modal')
-const imgModal = document.querySelectorAll('.grid img')
+const imgModal = document.querySelectorAll('#gallery .grid img')
 const exitModal = document.querySelector('.exit')
 const setaD = document.getElementById('setaD')
 const setaE = document.getElementById('setaE')
