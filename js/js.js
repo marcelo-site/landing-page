@@ -109,7 +109,6 @@ exitModal.addEventListener ( 'click' , function() {
 modal.addEventListener('click', (e) => {
     modal.classList.remove('modal-active')
     body.classList.remove('body-overflow')
-    console.log(11)
     e.stopPropagation();
 } )
 modalImg.addEventListener('click', (e) => {
@@ -121,8 +120,8 @@ zoom.addEventListener('click', (e)=>{
     zoomMais.classList.toggle('invisible')
     zoomMenos.classList.toggle('invisible')
     if(largura > 800){
-        modalImg.classList.toggle('scale2');
-    modalImg.addEventListener('mousemove', () => {
+    modalImg.classList.add('scale2');
+    modalImg.addEventListener('mousemove', (e) => {
     const x = e.clientX - e.target.offsetLeft;
     const y = e.clientY - e.target.offsetTop;
     modalImg.style.transformOrigin = `${x}px ${y}px`

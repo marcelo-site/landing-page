@@ -1,9 +1,6 @@
 @media (max-width: 800px){
-    .body-overflow{
-        overflow: hidden;
-    }
+    
     .over-auto{
-        
         overflow: auto;
     }
     .intro-content, .grid{

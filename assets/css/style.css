@@ -1,3 +1,6 @@
+.body-overflow{
+    overflow: hidden;
+}
 .intro-content{
     position: relative;
     display: grid;
