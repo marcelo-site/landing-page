@@ -87,18 +87,18 @@ setaE.addEventListener ( 'click', function(e){
                 }
             }
     e.stopPropagation();
-} )
+})
 setaD.addEventListener('click', function(e){
     srcValue = modalImg.getAttribute('src')
     splitImg()
     if (src2 < imgModalSize){
-                modalImg.setAttribute('src', `${src[0]}-${src2 + 1}.${src1[1]}`) 
-                if(src2 ==  (imgModalSize - 1)) {
-                    setaD.classList.add('modal-fim')   
-                } else {
-                    setaE.classList.remove('modal-fim')
-                }
+            modalImg.setAttribute('src', `${src[0]}-${src2 + 1}.${src1[1]}`) 
+            if(src2 ==  (imgModalSize - 1)) {
+                setaD.classList.add('modal-fim')   
+            } else {
+                setaE.classList.remove('modal-fim')
             }
+        }
     e.stopPropagation();
 })
 exitModal.addEventListener ( 'click' , function() {
@@ -120,21 +120,20 @@ const zoomMenos = document.querySelector('.diminuir')
 zoom.addEventListener('click', (e)=>{
     zoomMais.classList.toggle('invisible')
     zoomMenos.classList.toggle('invisible')
-    modalImg.classList.toggle('scale2');
     if(largura > 800){
-modalImg.addEventListener('mousemove', () => {
+        modalImg.classList.toggle('scale2');
+    modalImg.addEventListener('mousemove', () => {
     const x = e.clientX - e.target.offsetLeft;
     const y = e.clientY - e.target.offsetTop;
-    modalImg.style.transformOrigin = `${x}px ${y}px`;
-   
-        modalImg.addEventListener('mouseleave', () => {
+    modalImg.style.transformOrigin = `${x}px ${y}px`
+    })
+    modalImg.addEventListener('mouseleave', () => {
            zoomMais.classList.remove('invisible')
            zoomMenos.classList.add('invisible')
             modalImg.style.transformOrigin = 'center center'
             modalImg.classList.remove('scale2')
      })
-    });
-}
+    }
     else {
         modalImg.classList.toggle('modal-img')
     }
