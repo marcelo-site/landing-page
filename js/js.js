@@ -44,6 +44,7 @@ const slideText2 = document.getElementById("slideText2")
 slideText(slideText1)
 slideText(slideText2)
 //Modal img
+const largura = window.screen.width
 const modal = document.getElementById('modal')
 const imgModal = document.querySelectorAll('.grid img')
 const exitModal = document.querySelector('.exit')
@@ -114,18 +115,29 @@ modal.addEventListener('click', (e) => {
 modalImg.addEventListener('click', (e) => {
     e.stopPropagation()
 })
+const zoomMais = document.querySelector('.ampliar')
+const zoomMenos = document.querySelector('.diminuir')
 zoom.addEventListener('click', (e)=>{
-    // modalImg.style.width = '200%'
-modalImg.addEventListener('mousemove', (e) => {
+    zoomMais.classList.toggle('invisible')
+    zoomMenos.classList.toggle('invisible')
+    modalImg.classList.toggle('scale2');
+    if(largura < 800){
+modalImg.addEventListener('mousemove', () => {
     const x = e.clientX - e.target.offsetLeft;
     const y = e.clientY - e.target.offsetTop;
     modalImg.style.transformOrigin = `${x}px ${y}px`;
-    modalImg.style.transform = 'scale(2)';
-})
-modalImg.addEventListener('mouseleave', () => {
-    modalImg.style.transformOrigin = 'center center'
-    modalImg.style.transform = 'scale(1)'
-})
+   
+        modalImg.addEventListener('mouseleave', () => {
+           zoomMais.classList.remove('invisible')
+           zoomMenos.classList.add('invisible')
+            modalImg.style.transformOrigin = 'center center'
+            modalImg.classList.remove('scale2')
+     })
+    });
+}
+    else {
+        modalImg.classList.toggle('modal-img')
+    }
     e.stopPropagation()
 })
 window.addEventListener ( 'load', modalActive)

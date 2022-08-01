@@ -301,7 +301,7 @@ iframe{
     z-index: 20;
     font-size: 2rem;
 }
-.modal img{
+.modal-img1{
     transform-origin: center center;
     object-fit: cover;
     height: 100%;
@@ -314,6 +314,7 @@ iframe{
     visibility: visible;
 }
 .over-auto{
+    max-height: 80vh;
     overflow: hidden;
 }
 .fundo {
@@ -380,6 +381,12 @@ iframe{
 #contato h2{
     margin-top: 10rem;
 }
+@media(min-width: 800px){
+.scale2{
+    transform: scale(1.5);
+}
+}
+
 i {
     background-color: white;
     font-size: 2em;

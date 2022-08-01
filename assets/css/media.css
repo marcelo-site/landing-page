@@ -3,6 +3,7 @@
         overflow: hidden;
     }
     .over-auto{
+        
         overflow: auto;
     }
     .intro-content, .grid{
@@ -68,7 +69,11 @@
     padding: 0;
     z-index: 190;
     background-color: rgba(0, 0, 0, 0.7);
-}
+    }
+    .modal-img {
+        width: 150%;
+        height: 150%;
+    }
 }
 @media (max-width: 480px) {
     #contato .grid{
