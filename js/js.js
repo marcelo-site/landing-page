@@ -121,7 +121,7 @@ zoom.addEventListener('click', (e)=>{
     zoomMais.classList.toggle('invisible')
     zoomMenos.classList.toggle('invisible')
     modalImg.classList.toggle('scale2');
-    if(largura < 800){
+    if(largura > 800){
 modalImg.addEventListener('mousemove', () => {
     const x = e.clientX - e.target.offsetLeft;
     const y = e.clientY - e.target.offsetTop;
