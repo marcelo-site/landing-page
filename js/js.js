@@ -14,10 +14,11 @@ function menuResponsivo(){
 }
 closeMenuLabel.addEventListener('click', menuResponsivo)
 closeMenu.addEventListener('click', menuResponsivo)
+closeOpen.addEventListener('click', ()=> body.classList.remove('body-overflow'))
 const displayHeigth = window.innerHeight
 //button top
 const topButton = document.querySelector('.back-to-top')
-let top1 = () => {
+const top1 = () => {
     let top =  window.pageYOffset || document.documentElement.scrollTop
     if(top >= displayHeigth/3){
         topButton.classList.add('flex')

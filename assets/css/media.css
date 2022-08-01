@@ -1,5 +1,7 @@
 @media (max-width: 800px){
-    
+    .body-media-over{
+        overflow: hidden;
+    }
     .over-auto{
         overflow: auto;
     }
