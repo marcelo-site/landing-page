@@ -87,6 +87,9 @@
     .zoom svg {
         margin: -3px;
     }
+    .grid-one-content > p {
+        font-size: 2rem;
+    }
 }
 @media (max-width: 480px) {
     #contato .grid{
@@ -118,5 +121,8 @@
     }
     .zoom svg{
         margin: -6px;
+    }
+    .grid-one-content > p {
+        font-size: 1.4rem;
     }
 }
