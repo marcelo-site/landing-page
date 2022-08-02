@@ -1,3 +1,11 @@
+@media(min-width: 800px){
+    .scale2{
+        transform: scale(1.5);
+    }
+    .contaner-modal{
+        height: 80vh;
+    }
+}
 @media (max-width: 800px){
     .body-media-over{
         overflow: hidden;
@@ -73,6 +81,9 @@
         width: 150%;
         height: 150%;
     }
+    .zoom svg {
+        margin: -3px;
+    }
 }
 @media (max-width: 480px) {
     #contato .grid{
@@ -101,5 +112,8 @@
     }
     #wats::after{
         display: none;
+    }
+    .zoom svg{
+        margin: -6px;
     }
 }

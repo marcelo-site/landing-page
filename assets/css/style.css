@@ -316,8 +316,10 @@ iframe{
 .modal-active { 
     visibility: visible;
 }
-.over-auto{
+.contaner-modal{
     max-height: 80vh;
+}
+.over-auto{
     overflow: hidden;
 }
 .fundo {
@@ -356,6 +358,8 @@ iframe{
     color: white;
 }
 .zoom svg{
+    height: 24px;
+    width: 24px;
     fill: white;
 }
 .link-tel {
@@ -385,12 +389,6 @@ iframe{
     text-align: center;
     margin-top: 10rem;
 }
-@media(min-width: 800px){
-.scale2{
-    transform: scale(1.5);
-}
-}
-
 i {
     background-color: white;
     font-size: 2em;
