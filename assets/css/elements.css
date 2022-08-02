@@ -53,9 +53,6 @@ h6{
 p{
     margin-bottom: 3rem;
 }
-.responsive-table{
-    overflow-x: auto;
-}
 table{
     min-width: 36rem;
     width: 100%;
