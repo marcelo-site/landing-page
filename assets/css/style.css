@@ -37,7 +37,6 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    text-align: center;
     min-height: 100vh;
 }
 .grid-one-content{
@@ -46,6 +45,7 @@
     justify-content: center;
 }
 .grid-one-content h2{
+    text-align: initial;
     margin-top: 5rem;
     margin-bottom: 1rem;
 }
@@ -186,7 +186,6 @@ div.full-widht{
     margin: 20px 0;
 }
 .port{
-    text-align: center;
     margin-top: 6rem;
 }
 #top3 div{
