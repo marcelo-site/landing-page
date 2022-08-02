@@ -73,6 +73,10 @@ table td, table th{
     text-align: left;
     padding: 1rem;
 }
+tfoot td {
+    text-align: end;
+    padding-right: 30px;
+}
 tfoot td, thead th{
     background-color: var(--light-gray-color);
 }
