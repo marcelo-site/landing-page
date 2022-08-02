@@ -28,6 +28,9 @@
     .gallery-img img {
         width: 100%;
     }
+    #grid-two img{
+        padding: 15vh 0px;
+    }
     .menu-mobile{
         height: 100vh;
     }

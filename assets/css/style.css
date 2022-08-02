@@ -79,7 +79,6 @@
     display: block;
 }
 .gallery-img{
-    width: 100%;
     position: relative;
     overflow: hidden;
 }
@@ -188,18 +187,18 @@ div.full-widht{
 .port{
     margin-top: 6rem;
 }
-#top3 div{
+#port div{
     margin: 20px;
     font-size: 20px;
     font-weight: 600;
 }
-#top3 div img{
+#port div img{
     width: 100%;
 }
-#top3 p{
+#port p{
     margin-top: 30px;
 }
-#top3 div p:after {
+#port div p:after {
     content: ' ↗️';
 }
 section#grid-one {
@@ -208,6 +207,13 @@ section#grid-one {
 #grid-one div img{
     margin-top: 6rem;
     width: 100%;
+}
+#grid-two img{
+    overflow: hidden;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: content-box;
+    padding: 10vh 0px;
 }
 .a-red{
     color:#e54d42;
