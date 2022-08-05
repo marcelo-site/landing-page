@@ -2,7 +2,7 @@ const menuClose = document.querySelector('#icon-close');
 const menuOpen = document.querySelector('#icon-open');
 const closeOpen = document.getElementById('close-menu')
 const body = document.querySelector('body')
-const closeMenuLabel = document.querySelector('.close-menu-label')
+const closeMenuLabel = document.querySelector('.toggle-menu-label')
 const closeMenu = document.querySelector('.menu-mobile')
 const fundoMenuToggle= document.querySelector('#fundo-menu-toggle')
 function menuResponsivo(){
@@ -62,13 +62,13 @@ let src2 = ''
 const height = window.screen.width
 const imgModalSize = imgModal.length
 function modalActive() {
-    for ( let index = 0;index < imgModal.length; index++) {
-        imgModal[index].addEventListener ( 'click' , function() {
-            srcValue = imgModal[index].getAttribute('src')
+    for ( let i = 0;i < imgModalSize; i++) {
+        imgModal[i].addEventListener ('click' ,()=> {
+            srcValue = imgModal[i].getAttribute('src')
         modalImg.setAttribute('src', srcValue)
             modal.classList.toggle('modal-active')
             body.classList.add('body-overflow')
-        })
+        })  
     }
 }
 function splitImg(){
@@ -76,20 +76,19 @@ function splitImg(){
     src1 = src[1].split ('.')
     src2 = parseInt(src1[0])
 }
-setaE.addEventListener ( 'click', function(e){
+setaE.addEventListener ('click', (e)=> {
     srcValue = modalImg.getAttribute('src')
     splitImg()
     if (src2 > 1){
                 modalImg.setAttribute('src', `${src[0]}-${src2 - 1}.${src1[1]}`)
-                if( src2 == 2){
+                if(src2 == 2){
                     setaE.classList.add('modal-fim')   
                 } else  {
                     setaD.classList.remove('modal-fim')
                 }
-            }
-    e.stopPropagation();
+            }   e.stopPropagation();
 })
-setaD.addEventListener('click', function(e){
+setaD.addEventListener('click', (e)=> {
     srcValue = modalImg.getAttribute('src')
     splitImg()
     if (src2 < imgModalSize){
@@ -99,15 +98,14 @@ setaD.addEventListener('click', function(e){
             } else {
                 setaE.classList.remove('modal-fim')
             }
-        }
-    e.stopPropagation();
+        }  e.stopPropagation();
 })
-exitModal.addEventListener ( 'click' , function() {
+exitModal.addEventListener ('click', ()=> {
     setaD.classList.remove('modal-fim')
     setaE.classList.remove('modal-fim')
     body.classList.remove('body-overflow')
 })
-modal.addEventListener('click', (e) => {
+modal.addEventListener('click', (e)=> {
     modal.classList.remove('modal-active')
     body.classList.remove('body-overflow')
     e.stopPropagation();
@@ -117,7 +115,7 @@ modalImg.addEventListener('click', (e) => {
 })
 const zoomMais = document.querySelector('.ampliar')
 const zoomMenos = document.querySelector('.diminuir')
-zoom.addEventListener('click', (e)=>{
+zoom.addEventListener('click', (e)=> {
     zoomMais.classList.toggle('invisible')
     zoomMenos.classList.toggle('invisible')
     if(largura > 800){
@@ -127,7 +125,7 @@ zoom.addEventListener('click', (e)=>{
     const y = e.clientY - e.target.offsetTop;
     modalImg.style.transformOrigin = `${x}px ${y}px`
     })
-    modalImg.addEventListener('mouseleave', () => {
+    modalImg.addEventListener('mouseleave', ()=> {
            zoomMais.classList.remove('invisible')
            zoomMenos.classList.add('invisible')
             modalImg.style.transformOrigin = 'center center'
@@ -139,4 +137,4 @@ zoom.addEventListener('click', (e)=>{
     }
     e.stopPropagation()
 })
-window.addEventListener ( 'load', modalActive)
+window.addEventListener ('load', modalActive)

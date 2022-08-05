@@ -13,7 +13,7 @@
     .over-auto{
         overflow: auto;
     }
-    .intro-content, .grid{
+    .section-one-content, .grid{
         grid-template-columns: 1fr;
     }
     .grid.img-media{
@@ -28,7 +28,7 @@
     .gallery-img img {
         width: 100%;
     }
-    #grid-two img{
+    #section-five img{
         padding: 15vh 0px;
     }
     .menu-mobile{
@@ -45,13 +45,13 @@
         width: 80%;
         right: 0;
     }
-    .close-menu-label{
+    .toggle-menu-label{
         position: fixed;
         z-index: 200;
         top: 1rem;
         right: 1rem;
     }
-    .close-menu-label::before{
+    .toggle-menu-label::before{
         content: 'Menu';
         font-weight: 600;
         display: inline;
@@ -69,7 +69,7 @@
     .icon {
         fill: aliceblue;
     }
-    .intro-text h2{
+    .section-one-text h2{
         font-size: 7rem;
     }
     .fundo-menu-toggle{
@@ -86,9 +86,6 @@
     }
     .zoom svg {
         margin: -3px;
-    }
-    .grid-one-content > p {
-        font-size: 2rem;
     }
 }
 @media (max-width: 480px) {
@@ -110,10 +107,10 @@
     .grid.img-media{
         grid-template-columns: 1fr;
     }
-    .intro-text h2, h2{
+    .section-one-text h2, h2{
         font-size: 2.5rem;
     }
-    .close-menu-label::before{
+    .toggle-menu-label::before{
         display: none;
     }
     #wats::after{
@@ -121,8 +118,5 @@
     }
     .zoom svg{
         margin: -6px;
-    }
-    .grid-one-content > p {
-        font-size: 1.4rem;
     }
 }

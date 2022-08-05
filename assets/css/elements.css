@@ -53,27 +53,8 @@ h6{
 p{
     margin-bottom: 3rem;
 }
-table{
-    min-width: 36rem;
-    width: 100%;
-    border-collapse: collapse;
-}
-table caption{
-    font-style: italic;
-    font-size: 1.6rem;
-    text-align: left;
-    margin-bottom: 1rem;
-}
-table td, table th{
-    white-space: nowrap;
-    border: 1px solid var(--light-gray-color);
-    text-align: left;
-    padding: 1rem;
-}
-tfoot td {
-    text-align: end;
-    padding-right: 30px;
-}
-tfoot td, thead th{
-    background-color: var(--light-gray-color);
+iframe{
+    width: 99vw;
+    height: 35vh;
+    margin-top: 20px;
 }

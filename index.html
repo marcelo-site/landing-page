@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <title>Landing page de um programador</title>
+    <meta name="description" content="Landing page exemplo do trabalho e com portifólios de quem criou a página em construir sites em tecnologias html, css, javascript e wordpress.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -18,7 +19,7 @@
 <body>
     <div id="fundo-menu-toggle" class="fundo-menu-toggle invisible"></div>
     <div>
-        <div class="close-menu-label">
+        <div class="toggle-menu-label">
             <div id="icon-open" class="invisible visible-media icon fundo" >
                 <svg  xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="M2.675 18.525V15.875H21.325V18.525ZM2.675 13.325V10.675H21.325V13.325ZM2.675 8.125V5.475H21.325V8.125Z"/></svg>
             </div>
@@ -26,14 +27,14 @@
                 <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path d="M6.4 19.45 4.55 17.6 10.15 12 4.55 6.4 6.4 4.55 12 10.15 17.6 4.55 19.45 6.4 13.85 12 19.45 17.6 17.6 19.45 12 13.85Z"/></svg>
             </div>
         </div>
-         <aside id="" class="menu white-bg">
+         <aside class="menu white-bg">
             <div class="main-content menu-content">
                 <h1><a href="#">LOGO</a></h1>
                 <nav id="close-menu" class="menu-mobile invisible-media">
                     <ul class="flex">
                         <li><a href="#port">Portifólio</a></li>
+                        <li><a href="#top3">3 Motivos</a></li> 
                         <li><a href="#gallery">Certificados</a></li>
-                        <li><a href="#top3">3 Motivos</a></li>
                         <li><a href="#contato">Contato</a></li>
                     </ul>
                 </nav>
@@ -42,9 +43,9 @@
     </div>
     <div class="menu-spacing"></div>
     <main>
-        <section id="intro" class="main-bg section background1">
-                <div class="main-content intro-content-flex">
-                    <div class="intro-text">
+        <section id="section-one" class="main-bg section background1">
+                <div class="main-content section-one-content-flex">
+                    <div class="section-one-text">
                         <div class="flex">
                             <div class="block position-relative">
                                 <div id="slideText1" class="slideText invisible inline-block">Marcelo</div>
@@ -65,19 +66,19 @@
             <div id="port" class="main-content top3-conten">
                 <h2 class="port">meu portifólio</h2>
                 <div class="grid">
-                    <div class="">
+                    <div>
                         <a href="https://vainodigital.com/" target="_blank">
                             <img class="" src="assets/Nova-pasta/Captura de tela 2022-07-31 101827.png" alt="">
                             <p>Demostração de uma loja virtual</p>
                         </a>
                     </div>
-                    <div class="">
+                    <div>
                         <a href="https://marcelosite.xyz/" target="_blank">
                             <img class="" src="assets/Nova-pasta/Captura de tela 2022-07-31 101734.png" alt="">
                             <p>Demostração de um site intitucional</p>
                         </a>
                     </div>
-                    <div class="">
+                    <div>
                         <a href="https://github.com/marcelo-site" target="_blank">
                             <img class="" src="assets/Nova-pasta/Captura de tela 2022-07-31 102052.png" alt="">
                             <p>Meu portifolio no github</p>
@@ -86,11 +87,37 @@
                 </div>
             </div>
         </section>
-        <section id="grid-one" class="main-bg section background3">
+        <section id="svg-tec-front" class="main-bg background3">
             <h2 class="port">Seu produto ou serviço online</h2>
             <div>
                 <img src="assets/Nova-pasta/953322_OE60WU1-ai (2) (1).jpg" alt="">
             </div>
+        </section>
+        <section id="top3" class="section white-bg" >
+            <div class="main-content svg-tec-front-content">
+                <div>
+                    <h2>Por que um site?</h2>
+                    <p class="top3-p">Pelo menos 3 motivos</p>
+                </div>
+                <div class="grid">
+                    <div>
+                        <h3>Motivo</h3>
+                        <p>A internet está trasformando nossas relações, cada vez mais presente no nosso cotidiano, diminuindo distâncias, quantas vazes já não se sentimos mais perto de alguém dando um "oi", "Bom dia!"  ou algo parecido, usando a internet? cenário que demonstra uma tendência que já é indispensável uma presença online para se comunicar com seu público-alvo, ai vem uma vantagem o quanto caro e cansativo seria estar disponível em todo canto a todo tempo, a internet proporcina isso de uma maneira mais realista.</p>
+                    </div>
+                    <div>
+                        <h3>Motivo</h3>
+                        <p>Segundo dados do Centro Regional de Estudos para o Desenvolvimento da Sociedade da Informação (<a href="https://cetic.br/pt/pesquisa/domicilios/">Cetic.br</a>), entre 2019 e 2021 houve um aumento de 11% no acesso a internet, em um pais com mais de 200 milhões de habitantes como o brasil, considerando margens de erro, uns 20, 30 milhões de novos internautas, um aumento consideravél desse público atingindo pouco mais de 80% do país. Há um intresse público e economico para integrar plenamente o país a internet, já dar para sentir um cheiro de oprtunidade para seu negócio.</p>
+                    </div>
+                    <div>
+                        <h3>Motivo</h3>
+                        <p>Um dado concreto da importância da internet para seu negócio, é fornecido pela Cetic.br, as pessoas que fazem compras online, era <a href="https://cetic.br/pt/tics/domicilios/2019/individuos/H2/">39% da amostra em 2019</a> e em <a class="a-red" href="https://cetic.br/pt/tics/domicilios/2021/individuos/H2/">2021 já era 46%</a>, praticamente 50% do seu publico-alvo estar online e com tendência de crescimento.<br>
+                        Vai bobear e deixar seu público expostos a investidas do seu concorrente?.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section-five" class="main-bg svg-tec-front background3">
+            <img src="assets/img/javascript.svg" alt="">
         </section>
         <section id="gallery" class="white-bg section">
             <div class="main-content">
@@ -127,44 +154,18 @@
                     </div>
             </div>
         </section>
-        <section id="grid-two" class="main-bg grid-one background3">
-            <img src="assets/img/javascript.svg" alt="">
-        </section>
-        <section id="top3" class="section white-bg" >
-            <div class="main-content grid-one-content">
-                <h2>Por que um site?</h2>
-                <p>Pelo menos 3 motivos</p>
-                <div class="grid">
-                    <div>
-                        <h3>Motivo</h3>
-                        <p>A internet está trasformando nossas relações, cada vez mais presente no nosso cotidiano, diminuindo distâncias, quantas vazes já não se sentimos mais perto de alguém dando um "oi", "Bom dia!"  ou algo parecido, usando a internet? cenário que demonstra uma tendência que já é indispensável uma presença online para se comunicar com seu público-alvo, ai vem uma vantagem o quanto caro e cansativo seria estar disponível em todo canto a todo tempo, a internet proporcina isso de uma maneira mais realista.</p>
-                    </div>
-                    <div>
-                        <h3>Motivo</h3>
-                        <p>Segundo dados do Centro Regional de Estudos para o Desenvolvimento da Sociedade da Informação (<a class="a-red
-                        " href="https://cetic.br/pt/pesquisa/domicilios/">Cetic.br</a>), entre 2019 e 2021 houve um aumento de 11% no acesso a internet, em um pais com mais de 200 milhões de habitantes como o brasil, considerando margens de erro, uns 20, 30 milhões de novos internautas, um aumento consideravél desse público atingindo pouco mais de 80% do país. Há um intresse público e economico para integrar plenamente o país a internet, já dar para sentir um cheiro de oprtunidade para seu negócio.</p>
-                    </div>
-                    <div>
-                        <h3>Motivo</h3>
-                        <p>Um dado concreto da importância da internet para seu negócio, é fornecido pela Cetic.br, as pessoas que fazem compras online, era <a href="https://cetic.br/pt/tics/domicilios/2019/individuos/H2/">39% da amostra em 2019</a> e em <a class="a-red" href="https://cetic.br/pt/tics/domicilios/2021/individuos/H2/">2021 já era 46%</a>, praticamente 50% do seu publico-alvo estar online e com tendência de crescimento.<br>
-                        Vai bobear e deixar seu público expostos a investidas do seu concorrente?.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section id="contato" class="main-bg section background2">
          <h2>Contato</h2>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d698.5378999909989!2d-36.2046943128128!3d-7.944355871247559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a97389c4db1fa1%3A0xce2f4449c9f3b184!2sR.%20Juscelino%20Nunes%20de%20Oliveira%2C%20230%20-%20Dona%20Dom%2C%20Santa%20Cruz%20do%20Capibaribe%20-%20PE%2C%2055190-000!5e0!3m2!1spt-BR!2sbr!4v1659292031448!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div class="grid">
                 <div class="link-tel"> 
-                    <a href="tel:+5581991869812"><i class="fas fa-phone"></i><p class="p-bottom">Ligar (81) 99186-9812</p>
-                </a>
-            </div>
-                <div class="link-tel">
-                    <a href="https://api.whatsapp.com/send?phone=5581991869812&text=Olá%20,tenho%20interesse%20em%20seus%20serviços."><i class="fab fa-whatsapp btn-wats wats-menor"></i>
-                    <p>whatsapp</p>
-                </a> 
+                    <a href="tel:+5581991869812"><i class="fas fa-phone"></i><p class="p-bottom">Ligar (81) 99186-9812</p></a>
                 </div>
+                <div class="link-tel grid-2row">
+                    
+                    <a href="https:mailto:franiscomarcelo@gmail.com.br?Preciso De um site.">
+                    <i class="fas fa-at"></i><p>Enviar Email</p></a>
+            </div>
             </div>
     </section>
     </main>
@@ -173,6 +174,6 @@
 <footer>
  <p> Copyright © 2020 | <a href="https://www.facebook.com/profile.php?id=100015225941991">Marcelo</a>.</p>
 </footer>
-<script src="/js/js.js"></script>
+<script src="js.js"></script>
 </body>
 </html>
