@@ -111,7 +111,7 @@
         font-size: 2.5rem;
     }
     .toggle-menu-label::before{
-        display: none;
+        font-size: 1.5rem;
     }
     #wats::after{
         display: none;

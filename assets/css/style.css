@@ -48,8 +48,8 @@
 .grid h3{
     font-size: 3rem;
     position: relative;
-    padding-left: 7rem;
-    padding-bottom: 5rem;
+    padding-left: 10rem;
+    padding-bottom: 3rem;
 }
 .grid h3::before{
     counter-increment: grid-counter;
@@ -58,8 +58,15 @@
     font-size: 8rem;
     font-style: italic;
     top: -4rem;
-    left: 0rem;
+    left: 0.5rem;
     transform: rotate(5deg);
+}
+.grid h3::after {
+    content: 'º';
+    position: absolute;
+    left: 6.5rem;
+    top: -2rem;
+    font-size: 5rem;
 }
 .block{
     display: block;
@@ -112,10 +119,6 @@
     font-size: 1.1em;
     margin: 20px 0;
 }
-.port{
-    padding-top: 6rem;
-    margin-top: 6rem;
-}
 #port div{
     margin: 20px;
     font-size: 20px;
@@ -133,10 +136,12 @@
 p.top3-p {
     text-align: center;
     margin-top: -30px;
-    margin-bottom: 100px;
+    margin-bottom: 8rem;
 }
 section#svg-tec-front {
     min-height: 80vh;
+    padding-bottom: 10rem;
+    padding-top: 6rem;
 }
 #svg-tec-front div img{
     margin-top: 6rem;
@@ -148,9 +153,6 @@ section#svg-tec-front {
     overflow: hidden;
     box-sizing: content-box;
     padding: 10vh 0px;
-}
-section#svg-tec-front {
-    padding-bottom: 10rem;
 }
 .slideText {
     font-size: 2.5em;
