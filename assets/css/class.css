@@ -31,5 +31,4 @@
 .section {
     min-height: 100vh;
     overflow: hidden;
-    scroll-margin-top: 1000px;
 }

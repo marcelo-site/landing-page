@@ -90,6 +90,9 @@
     section#svg-tec-front{
         padding-bottom: 8rem;
     }
+    section#port {
+        margin-bottom: -6rem;
+    }
 }
 @media (max-width: 480px) {
     #contato .grid{
