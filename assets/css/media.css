@@ -87,6 +87,9 @@
     .zoom svg {
         margin: -3px;
     }
+    section#svg-tec-front{
+        padding-bottom: 8rem;
+    }
 }
 @media (max-width: 480px) {
     #contato .grid{
@@ -112,5 +115,8 @@
     }
     .zoom svg{
         margin: -6px;
+    }
+    section#svg-tec-front{
+        padding-bottom: 5rem;
     }
 }
