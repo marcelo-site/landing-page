@@ -49,7 +49,6 @@ document.addEventListener( "scroll", top1)
 const largura = window.screen.width
 const modal = document.getElementById('modal')
 const imgModal = document.querySelectorAll('#gallery .grid img')
-const exitModal = document.querySelector('.exit')
 const setaD = document.getElementById('setaD')
 const setaE = document.getElementById('setaE')
 const modalImg = document.querySelector('#modal img')
@@ -67,7 +66,7 @@ function modalActive() {
         imgModal[i].addEventListener ('click' ,()=> {
             srcValue = imgModal[i].getAttribute('src')
         modalImg.setAttribute('src', srcValue)
-            modal.classList.toggle('modal-active')
+            modal.classList.add('modal-active')
             body.classList.add('body-overflow')
         })  
     }
@@ -101,12 +100,14 @@ setaD.addEventListener('click', (e)=> {
             }
         }  e.stopPropagation();
 })
-exitModal.addEventListener ('click', ()=> {
+exitModal.addEventListener ('click', (e)=> {
     setaD.classList.remove('modal-fim')
     setaE.classList.remove('modal-fim')
-    body.classList.remove('body-overflow')
+    e.stopPropagation()
 })
 modal.addEventListener('click', (e)=> {
+    setaD.classList.remove('modal-fim')
+    setaE.classList.remove('modal-fim')
     modal.classList.remove('modal-active')
     body.classList.remove('body-overflow')
     e.stopPropagation();
