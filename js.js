@@ -1,3 +1,20 @@
+//slide text
+function slideText(e) {
+    const textArray = e.innerHTML.split('')
+    setInterval(() =>{
+        e.innerHTML= ''
+        e.classList.toggle('inline-block')
+        textArray.forEach((letra, i) => {
+            setTimeout(function(){
+                e.innerHTML += letra
+            },120 * i)
+        });
+    }, 4000) 
+}
+const slideText1 = document.getElementById("slideText1");
+const slideText2 = document.getElementById("slideText2")
+slideText(slideText1)
+slideText(slideText2)
 const menuClose = document.querySelector('#icon-close');
 const menuOpen = document.querySelector('#icon-open');
 const closeOpen = document.getElementById('close-menu')
@@ -27,23 +44,7 @@ const top1 = () => {
     }
 }
 document.addEventListener( "scroll", top1)
-//slide text
-function slideText(e) {
-        const textArray = e.innerHTML.split('')
-        setInterval(() =>{
-            e.innerHTML= ''
-            e.classList.toggle('inline-block')
-            textArray.forEach((letra, i) => {
-                setTimeout(function(){
-                    e.innerHTML += letra
-                },120 * i)
-            });
-        }, 5000) 
- }
-const slideText1 = document.getElementById("slideText1");
-const slideText2 = document.getElementById("slideText2")
-slideText(slideText1)
-slideText(slideText2)
+
 //Modal img
 const largura = window.screen.width
 const modal = document.getElementById('modal')
