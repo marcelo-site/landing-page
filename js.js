@@ -49,6 +49,7 @@ document.addEventListener( "scroll", top1)
 const largura = window.screen.width
 const modal = document.getElementById('modal')
 const imgModal = document.querySelectorAll('#gallery .grid img')
+const exitModal = document.querySelector('body')
 const setaD = document.getElementById('setaD')
 const setaE = document.getElementById('setaE')
 const modalImg = document.querySelector('#modal img')
