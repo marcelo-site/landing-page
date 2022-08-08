@@ -24,9 +24,14 @@
     justify-content: center;
 }
 .section-one-text h2{
-    font-size: 8rem;
-    margin-bottom: 5rem;
+    font-size: 4rem;
+    margin-bottom: 3rem;
     line-height: 1;
+}
+p.flex {
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    margin-top: 2rem;
 }
 .top3-content{
     max-width: 80rem;
@@ -113,11 +118,6 @@
     padding: 0.3em;
     background-color: #f5f0f0;
     border: 2px solid rgba(0, 0, 0, 0.507);
-}
-.h2-menor{
-    font-weight: 400;
-    font-size: 1.1em;
-    margin: 20px 0;
 }
 #port div{
     margin: 20px;
