@@ -114,6 +114,9 @@
         line-height: 2;
         margin-bottom: 1rem;
     }
+    #port > div > p{
+        font-size: 1.5rem;
+    }
     .toggle-menu-label::before{
         font-size: 1.5rem;
     }
