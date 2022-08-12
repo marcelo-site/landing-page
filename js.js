@@ -1,20 +1,30 @@
 //slide text
-function slideText(e) {
+const textWriter = function(e){
     const textArray = e.innerHTML.split('')
+    e.innerHTML= ''
+    textArray.forEach((letra, i) => {
+       setTimeout(function(){
+        e.innerHTML += letra
+    },120 * i) 
+    })
+}
+const slideTextTimeout = (e) => {
+ setTimeout( ()=> { 
+    textWriter(e) 
+},200)
+}
+const slideText = (e) => {
     setInterval(() =>{
-        e.innerHTML= ''
+        textWriter(e)
         e.classList.toggle('inline-block')
-        textArray.forEach((letra, i) => {
-            setTimeout(function(){
-                e.innerHTML += letra
-            },120 * i)
-        });
     }, 4000) 
 }
 const slideText1 = document.getElementById("slideText1");
 const slideText2 = document.getElementById("slideText2")
+slideTextTimeout(slideText1)
 slideText(slideText1)
 slideText(slideText2)
+//Menu responsivo
 const menuClose = document.querySelector('#icon-close');
 const menuOpen = document.querySelector('#icon-open');
 const closeOpen = document.getElementById('close-menu')
@@ -22,7 +32,7 @@ const body = document.querySelector('body')
 const closeMenuLabel = document.querySelector('.toggle-menu-label')
 const closeMenu = document.querySelector('.menu-mobile')
 const fundoMenuToggle= document.querySelector('#fundo-menu-toggle')
-function menuResponsivo(){
+const menuResponsivo = () => {
     closeOpen.classList.toggle('visible-media');
     menuOpen.classList.toggle('visible-media');
     menuClose.classList.toggle('visible-media');
@@ -44,7 +54,6 @@ const top1 = () => {
     }
 }
 document.addEventListener( "scroll", top1)
-
 //Modal img
 const largura = window.screen.width
 const modal = document.getElementById('modal')
@@ -62,7 +71,7 @@ let src1 = ''
 let src2 = ''
 const height = window.screen.width
 const imgModalSize = imgModal.length
-function modalActive() {
+const modalActive = () => {
     for ( let i = 0;i < imgModalSize; i++) {
         imgModal[i].addEventListener ('click' ,()=> {
             srcValue = imgModal[i].getAttribute('src')
@@ -72,7 +81,7 @@ function modalActive() {
         })  
     }
 }
-function splitImg(){
+const splitImg = () => {
     src = srcValue.split('-')
     src1 = src[1].split ('.')
     src2 = parseInt(src1[0])
