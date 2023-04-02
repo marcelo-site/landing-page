@@ -150,6 +150,3 @@ zoom.addEventListener('click', (e)=> {
     e.stopPropagation()
 })
 window.addEventListener ('load', modalActive)
-if(3 =00 ){
-    body.classList.add("jjjj");
-}
