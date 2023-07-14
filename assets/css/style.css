@@ -103,12 +103,12 @@ p.flex {
 }
 .btn-wats {
     font-size: 2.5em;
-    background-color: #21D93D;
+    background-color: #48AA1F;
     color: #ffffff;
 }
 .btn-wats:hover {
     background-color: #ffffff;
-    color: #21D93D;
+    color: #48AA1F;
 }
 #wats::after {
     content: 'Ajuda? Clique!';
@@ -137,6 +137,33 @@ p.flex {
     font-size: 2.5rem;
     font-weight: 400;
     margin-top: -3rem;
+}
+
+#port a > i {
+    font-size: 1.5em;
+    background-color: #48AA1F;
+}
+
+#port-wats {
+    display: inline-block;
+    background-color: #48AA1F;
+    height: 60px;
+    border-radius: 5px;
+    padding: 0px 0px 0 7px;
+    color: white;
+    font-weight: bold;
+}
+
+.info {
+    font-weight: 100 !important;
+    text-align: justify !important;
+}
+.grid a p {
+    font-weight: 100;
+}
+.after {
+    display: block;
+    font-weight: bold;
 }
 .after::after {
     content: ' ↗️';
@@ -260,7 +287,7 @@ display: inline-block;
 }
 .fundo {
     padding: 4px 4px 0px 5px;
-    background-color: rgba(49, 48, 48);
+    background-color: #1A276B;
     height: 100%;
     width: 100%;
     z-index: 10;
@@ -280,9 +307,10 @@ display: inline-block;
     border-radius: 50%;
     color: var(--primary-color);
 }
-.modal-fim {
-    background-color: rgb(216 210 210 / 90%);
+.modal_fim {
     color: #24292f73;
+    cursor: no-drop; 
+    background-color: #f3ebebd1;
 }
 .zoom{
     z-index: 10;

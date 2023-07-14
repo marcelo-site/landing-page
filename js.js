@@ -1,23 +1,23 @@
 //slide text
-const textWriter = function(e){
+const textWriter = function (e) {
     const textArray = e.innerHTML.split('')
-    e.innerHTML= ''
+    e.innerHTML = ''
     textArray.forEach((letra, i) => {
-       setTimeout(function(){
-        e.innerHTML += letra
-    },120 * i) 
+        setTimeout(function () {
+            e.innerHTML += letra
+        }, 120 * i)
     })
 }
 const slideTextTimeout = (e) => {
- setTimeout( ()=> { 
-    textWriter(e) 
-},200)
+    setTimeout(() => {
+        textWriter(e)
+    }, 200)
 }
 const slideText = (e) => {
-    setInterval(() =>{
+    setInterval(() => {
         textWriter(e)
         e.classList.toggle('inline-block')
-    }, 4000) 
+    }, 4000)
 }
 const slideText1 = document.getElementById("slideText1");
 const slideText2 = document.getElementById("slideText2")
@@ -31,7 +31,7 @@ const closeOpen = document.getElementById('close-menu')
 const body = document.querySelector('body')
 const closeMenuLabel = document.querySelector('.toggle-menu-label')
 const closeMenu = document.querySelector('.menu-mobile')
-const fundoMenuToggle= document.querySelector('#fundo-menu-toggle')
+const fundoMenuToggle = document.querySelector('#fundo-menu-toggle')
 const menuResponsivo = () => {
     closeOpen.classList.toggle('visible-media');
     menuOpen.classList.toggle('visible-media');
@@ -41,19 +41,19 @@ const menuResponsivo = () => {
 }
 closeMenuLabel.addEventListener('click', menuResponsivo)
 closeMenu.addEventListener('click', menuResponsivo)
-closeOpen.addEventListener('click', ()=> body.classList.remove('body-overflow'))
+closeOpen.addEventListener('click', () => body.classList.remove('body-overflow'))
 const displayHeigth = window.innerHeight
 //button top
 const topButton = document.querySelector('.back-to-top')
 const top1 = () => {
-    let top =  window.pageYOffset || document.documentElement.scrollTop
-    if(top >= displayHeigth/3){
+    let top = window.pageYOffset || document.documentElement.scrollTop
+    if (top >= displayHeigth / 3) {
         topButton.classList.add('flex')
     } else {
         topButton.classList.remove('flex')
     }
 }
-document.addEventListener( "scroll", top1)
+document.addEventListener("scroll", top1)
 //Modal img
 const largura = window.screen.width
 const modal = document.getElementById('modal')
@@ -62,91 +62,91 @@ const exitModal = document.querySelector('body')
 const setaD = document.getElementById('setaD')
 const setaE = document.getElementById('setaE')
 const modalImg = document.querySelector('#modal img')
-const modalVer= document.querySelectorAll('.gallery-img')
+const modalVer = document.querySelectorAll('.gallery-img')
 const modalPver = document.querySelector('.modal-ver')
 const zoom = document.querySelector('.zoom')
 let srcValue = ''
-let src = ''
-let src1 = ''
-let src2 = ''
-const height = window.screen.width
 const imgModalSize = imgModal.length
-const modalActive = () => {
-    for ( let i = 0;i < imgModalSize; i++) {
-        imgModal[i].addEventListener ('click' ,()=> {
-            srcValue = imgModal[i].getAttribute('src')
-        modalImg.setAttribute('src', srcValue)
-            modal.classList.add('modal-active')
-            body.classList.add('body-overflow')
-        })  
+
+let indexImg = undefined
+const modalFim = (index) => {
+  if (index === 0) {
+        setaE.setAttribute('style', 'color: #24292f73;cursor: no-drop;background-color: #f3ebebd1;')
+    } else if (index === imgModal.length - 1) {
+        setaD.setAttribute('style', 'color: #24292f73;cursor: no-drop;background-color: #f3ebebd1;')
+    } else {
+        setaD.setAttribute('style', '')
+        setaE.setAttribute('style', '')
     }
 }
-const splitImg = () => {
-    src = srcValue.split('-')
-    src1 = src[1].split ('.')
-    src2 = parseInt(src1[0])
+imgModal.forEach((el, i) => el.addEventListener('click', (e) => {
+    e.stopPropagation()
+    modalFim(i)
+    indexImg = i
+    srcValue = el.getAttribute('src')
+    modalImg.setAttribute('src', srcValue)
+    modal.classList.add('modal-active')
+}))
+const imgChange = (e, ind) => {
+    e.stopPropagation();
+    modalFim(ind)
+    srcValue = imgModal[indexImg].getAttribute('src')
+    modalImg.src = srcValue
 }
-setaE.addEventListener ('click', (e)=> {
-    srcValue = modalImg.getAttribute('src')
-    splitImg()
-    if (src2 > 1){
-                modalImg.setAttribute('src', `${src[0]}-${src2 - 1}.${src1[1]}`)
-                if(src2 == 2){
-                    setaE.classList.add('modal-fim')   
-                } else  {
-                    setaD.classList.remove('modal-fim')
-                }
-            }   e.stopPropagation();
+setaE.addEventListener('click', (e) => {
+        indexImg--
+        if(indexImg < 0) indexImg = 0
+        if (indexImg < 0) {
+            indexImg = 0
+            e.stopPropagation()
+            return indexImg
+        }
+        if (indexImg <= imgModal.length - 1) imgChange(e, indexImg)
 })
-setaD.addEventListener('click', (e)=> {
-    srcValue = modalImg.getAttribute('src')
-    splitImg()
-    if (src2 < imgModalSize){
-            modalImg.setAttribute('src', `${src[0]}-${src2 + 1}.${src1[1]}`) 
-            if(src2 ==  (imgModalSize - 1)) {
-                setaD.classList.add('modal-fim')   
-            } else {
-                setaE.classList.remove('modal-fim')
-            }
-        }  e.stopPropagation();
+setaD.addEventListener('click', (e) => {
+    indexImg++
+    if(indexImg < 0) indexImg = 0
+    if(indexImg >= imgModal.length) {
+        indexImg = imgModal.length - 1
+        e.stopPropagation()
+        return
+    }
+    if (indexImg <= imgModal.length - 1) imgChange(e, indexImg)
 })
-exitModal.addEventListener ('click', (e)=> {
-    setaD.classList.remove('modal-fim')
-    setaE.classList.remove('modal-fim')
+exitModal.addEventListener('click', (e) => {
+    setaD.setAttribute('style', '')
+    setaE.setAttribute('style', '')
     e.stopPropagation()
 })
-modal.addEventListener('click', (e)=> {
-    setaD.classList.remove('modal-fim')
-    setaE.classList.remove('modal-fim')
+modal.addEventListener('click', (e) => {
+    setaD.setAttribute('style', '')
+    setaE.setAttribute('style', '')
     modal.classList.remove('modal-active')
     body.classList.remove('body-overflow')
     e.stopPropagation();
-} )
+})
 modalImg.addEventListener('click', (e) => {
     e.stopPropagation()
 })
 const zoomMais = document.querySelector('.ampliar')
 const zoomMenos = document.querySelector('.diminuir')
-zoom.addEventListener('click', (e)=> {
+zoom.addEventListener('click', (e) => {
     zoomMais.classList.toggle('invisible')
     zoomMenos.classList.toggle('invisible')
-    if(largura > 800){
-    modalImg.classList.add('scale2')
-    modalImg.addEventListener('mousemove', (e) => {
-    const x = e.clientX - e.target.offsetLeft;
-    const y = e.clientY - e.target.offsetTop;
-    modalImg.style.transformOrigin = `${x}px ${y}px`
-    })
-    modalImg.addEventListener('mouseleave', ()=> {
-           zoomMais.classList.remove('invisible')
-           zoomMenos.classList.add('invisible')
+    if (largura > 800) {
+        modalImg.classList.add('scale2')
+        modalImg.addEventListener('mousemove', (e) => {
+            const x = e.clientX - e.target.offsetLeft;
+            const y = e.clientY - e.target.offsetTop;
+            modalImg.style.transformOrigin = `${x}px ${y}px`
+        })
+        modalImg.addEventListener('mouseleave', () => {
+            zoomMais.classList.remove('invisible')
+            zoomMenos.classList.add('invisible')
             modalImg.style.transformOrigin = 'center center'
             modalImg.classList.remove('scale2')
-     })
+        })
     }
-    else {
-        modalImg.classList.toggle('modal-img')
-    }
+    else modalImg.classList.toggle('modal-img')
     e.stopPropagation()
 })
-window.addEventListener ('load', modalActive)
