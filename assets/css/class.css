@@ -22,7 +22,7 @@
 .main-content{
     max-width: 120rem;
     margin: 0 auto;
-    padding: 8rem var(--gap);
+    padding: 8rem var(--gap) 3rem;
 }
 .white-bg{
     background-color: var(--white-color);

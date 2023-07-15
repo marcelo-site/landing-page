@@ -66,6 +66,7 @@ const modalVer = document.querySelectorAll('.gallery-img')
 const modalPver = document.querySelector('.modal-ver')
 const zoom = document.querySelector('.zoom')
 let srcValue = ''
+const imgPlus = document.querySelector('#imgPlus')
 const imgModalSize = imgModal.length
 
 let indexImg = undefined
@@ -87,6 +88,7 @@ imgModal.forEach((el, i) => el.addEventListener('click', (e) => {
     modalImg.setAttribute('src', srcValue)
     modal.classList.add('modal-active')
 }))
+imgPlus.addEventListener('click', () => imgModal[5].click())
 const imgChange = (e, ind) => {
     e.stopPropagation();
     modalFim(ind)
