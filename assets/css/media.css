@@ -59,6 +59,7 @@
         right: 35px;
         top: 5px;
         font-size: 2rem;
+        color: var(--primary-color);
     }
     .invisible-media {
         display: none;

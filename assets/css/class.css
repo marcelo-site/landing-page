@@ -5,7 +5,7 @@
     color: var(--white-color);
 }
 .background1{
-    background-image: url(../img-use/laptop.webp);
+    background-image: url('../img-use/laptop.webp');
     background-position-x: left;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -13,7 +13,7 @@
     background-size: cover;
 }
 .background2{
-    background-image: url(../img/confetti-doodles.svg);
+    background-image: url('../img/confetti-doodles.svg');
      /* background by SVGBackgrounds.com */
 }
 .background3 {
