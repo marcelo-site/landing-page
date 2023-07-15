@@ -182,7 +182,7 @@ p.flex {
 
 #port #info {
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 0 auto 3rem;
     font-size: 1.6rem;
     font-weight: 100;
     text-align: justify;
