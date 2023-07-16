@@ -42,10 +42,11 @@ const menuResponsivo = () => {
 closeMenuLabel.addEventListener('click', menuResponsivo)
 closeMenu.addEventListener('click', menuResponsivo)
 closeOpen.addEventListener('click', () => body.classList.remove('body-overflow'))
+fundoMenuToggle.addEventListener('click', menuResponsivo)
 const displayHeigth = window.innerHeight
 //button top
 const topButton = document.querySelector('.back-to-top')
-const top1 = () => {
+const scrollTop = () => {
     let top = window.pageYOffset || document.documentElement.scrollTop
     if (top >= displayHeigth / 3) {
         topButton.classList.add('flex')
@@ -53,7 +54,7 @@ const top1 = () => {
         topButton.classList.remove('flex')
     }
 }
-document.addEventListener("scroll", top1)
+document.addEventListener("scroll", scrollTop)
 //Modal img
 const largura = window.screen.width
 const modal = document.getElementById('modal')
