@@ -13,6 +13,9 @@
     .over-auto{
         overflow: auto;
     }
+    div#github {
+        width: 100%;
+    }
     .section-one-content, .grid{
         grid-template-columns: 1fr;
     }

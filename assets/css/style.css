@@ -188,6 +188,11 @@ p.flex {
     text-align: justify;
 }
 
+div#github {
+    width: 33%;
+    margin: auto !important;
+}
+
 .grid a p {
     font-weight: 100;
 }
