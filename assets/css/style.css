@@ -145,10 +145,11 @@ p.flex {
     margin: 20px;
     font-size: 1.1em;
     font-weight: 600;
+    text-align: center;
 }
 
-#port div {
-    text-align: center;
+.flex {
+    display: flex;
 }
 
 #port div img {
