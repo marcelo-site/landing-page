@@ -19,6 +19,9 @@
     .section-one-content, .grid{
         grid-template-columns: 1fr;
     }
+    #port div.flex {
+        display: block;
+    }
     .grid.img-media{
         grid-template-columns: 1fr 1fr;
     }

@@ -148,10 +148,6 @@ p.flex {
     text-align: center;
 }
 
-.flex {
-    display: flex;
-}
-
 #port div img {
     width: 100%;
 }
